@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/640px-Instagram_logo_2022.svg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="navbar">
+                <!-- Instagram Logo -->
+                <div class="instagram-text-logo">
+                    <img decoding="async" src="https://i.postimg.cc/qMFTcDw1/instagram-text.png" id="white-color" alt="Instagram Logo">
+                </div>
+
+                <!-- Navigation Items -->
+                <div id="clicked">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60 " height="24" fill="currentColor" class="bi bi-house-door-fill" viewBox="15 0 24 24">
+                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+                      </svg>
+                    <a href="#">Home</a>
+                </div>
+
+                <div class="sub-section">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 24 24">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                      </svg>
+                    <a href="#">Search</a>
+                </div>
+
+                <div class="sub-section">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="24" fill="currentColor" class="bi bi-compass" viewBox="0 0 24 24">
+                        <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+                      </svg>
+                    <a href="#">Explore</a>
+                </div>
+
+                <div class="sub-section">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="37 " height="24" fill="currentColor" class="bi bi-film" viewBox="6 0 24 24">
+                        <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm4 0v6h8V1zm8 8H4v6h8zM1 1v2h2V1zm2 3H1v2h2zM1 7v2h2V7zm2 3H1v2h2zm-2 3v2h2v-2zM15 1h-2v2h2zm-2 3v2h2V4zm2 3h-2v2h2zm-2 3v2h2v-2zm2 3h-2v2h2z"/>
+                      </svg>
+                    <a href="#">Reels</a>
+                </div>
+
+                <div class="sub-section">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="24" fill="currentColor" class="bi bi-chat-text" viewBox="-10 0 24 24">
+                        <path d="M2.678 11.894a1 1 0 0 1 .287.801 11 11 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8 8 0 0 0 8 14c3.996 0 7-2.807 7-6s-3.004-6-7-6-7 2.808-7 6c0 1.468.617 2.83 1.678 3.894m-.493 3.905a22 22 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a10 10 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105"/>
+                        <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8m0 2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5"/>
+                      </svg>
+                    <a href="#">Messages</a>
+                </div>
+
+                <div class="sub-section">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="79" height="24" fill="currentColor" class="bi bi-heart" viewBox="-16 0 24 24">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                      </svg>
+                    <a href="#">Notification</a>
+                </div>
+
+                <div class="sub-section">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="24" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 24 24 ">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                      </svg>
+                    <a href="#">Create</a>
+                </div>
+
+                <div class="sub-section">
+                    <div class="profile-img">
+                        <img decoding="async" src="https://i.pinimg.com/736x/bf/91/6c/bf916c0ffa2e6ccd9d9ad8e753b02f4d.jpg" alt="Profile Image">
+                    </div>
+                    <a href="#">Profile</a>
+                </div>
+
+                <div class="menu-section" id="hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-justify" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+</svg>
+                    <a href="#">More</a>
+                </div>
+            </div>
+        </nav>
+        <div class="middle-section">
+            <div class="post-section">
+                <div class="nav-hidden">
+                    <div class="nav-hidden-logo" id="white-2color">
+                        <img decoding="async" src="https://i.postimg.cc/qMFTcDw1/instagram-text.png" alt="">
+                    </div>
+                    <div class="nav-hide-2">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                </div>
+                <div class="story-section">
+                    <div class="story">
+                        <div class="story-image">
+                            <img decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp_e1PcQ3IkLPfURI-ir8u1f0aR2pXQf-I4g&s">
+                        </div>
+                        <span>_Mammootty_</span>
+                    </div>
+                <div class="story">
+                    <div class="story-image">
+                         <img decoding="async" src="https://images.filmibeat.com/img/popcorn/fan_images/artist/26925/dulquer-salmaan-photos-images-79357.jpg">
+                        </div>
+                        <span>_DQ_..</span>
+                    </div>
+                <div class="story" id="story-2">
+                    <div class="story-image">
+                            <img decoding="async" src="https://english.mathrubhumi.com/image/contentid/policy:1.9796451:1723112908/image/Fahadh%20Faasil%202.jpg?$p=626c9db&f=8x11">
+                    </div>
+                        <span>Fahadh_</span>
+                </div>
+                    <div class="story" id="story-3">
+                        <div class="story-image" >
+                            <img decoding="async" src="https://img.studioflicks.com/wp-content/uploads/2021/11/09114839/Tovino-Thomas.jpg">
+                        </div>
+                        <span>Tovino_</span>
+                    </div>
+                    <div class="story" id="story-4">
+                        <div class="story-image">
+                            <img decoding="async" src="https://m.media-amazon.com/images/M/MV5BMDk3ZTI3NzMtMTc4MC00ZDFhLWI3NTMtMGIyZjVmOGViMzgwXkEyXkFqcGc@._V1_.jpg">
+                        </div>
+                        <span>mohanlal</span>
+                    </div>
+                    <div class="story" id="story-5">
+                        <div class="story-image">
+                            <img decoding="async" src="https://img.republicworld.com/tr:w-700,q-50/all_images/GYyTOtRXkAMJ7z--1727785019548.webp">
+                        </div>
+                        <span>rajini..</span>
+                    </div>
+                    <div class="story" id="story-6">
+                        <div class="story-image">
+                            <img decoding="async" src="https://i.pinimg.com/236x/d0/37/90/d037905d04e424020c119bf7cd07fa0a.jpg">
+                        </div>
+                        <span>nivin...</span>
+                    </div>
+                    <div class="story" id="story-7">
+                        <div class="story-image">
+                            <img decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYUyWgWakXrCdLzHFST4xHyN_iqrLLzeBlXg&s">
+                        </div>
+                        <span>Manju_W</span>
+                    </div>
+                </div>
+                <div class="post-area">
+                    <div class="post-main">
+                        <div class="post-header">
+                            <div class="post-left-header">
+                                <div class="post-image">
+                                    <img decoding="async" src="https://english.mathrubhumi.com/image/contentid/policy:1.9796451:1723112908/image/Fahadh%20Faasil%202.jpg?$p=626c9db&f=8x11">
+                                </div>
+                                <p class="post-username">
+                                    Fahadh_</p>
+                                    <i class="fa-solid fa-certificate"></i>
+                                    <span class="one-day"> . 1h </span>
+                                </div>
+                                <i class="fa-solid fa-grip-lines"></i>
+                            </div>
+                     <div class="post-main-image">
+                                <img decoding="async" src="https://m.media-amazon.com/images/M/MV5BYmY3NGIzYmUtM2VmMS00ODFhLWE2NzUtOTM3YmFhYjlhODA0XkEyXkFqcGc@._V1_.jpg">
+                    </div>
+                        <div class="post-fotter">
+                            <div class="post-fotter-left">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-message"></i>
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                                 <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="post-description">
+                                <p class="post-liked">Liked by Tovino_ and others</p>
+                                <p class="title"><span>Fahadh Faasil </span> Aavesham (2024) <br> more</p>
+                                <p class="comments"> view all comments</p>
+                            </div>
+                        </div>
+                        <div class="post-main">
+                            <div class="post-header">
+                                <div class="post-left-header">
+                                    <div class="post-image">
+                                        <img decoding="async" src="https://i.pinimg.com/236x/d0/37/90/d037905d04e424020c119bf7cd07fa0a.jpg">
+                                    </div>
+                                    <p class="post-username">nivin...</p>
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span class="one-day"> . 1d </span>
+                                    </div>
+                                    <i class="fa-solid fa-grip-lines"></i>
+                                </div>
+                                <div class="post-main-image">
+                                    <img decoding="async" src="https://m.media-amazon.com/images/M/MV5BNzEwMzhkODAtZTAzYi00OTVjLTg3NjMtM2IzM2E1ODRlMmYxXkEyXkFqcGc@._V1_.jpg">
+                                </div>
+                                <div class="post-fotter">
+                                    <div class="post-fotter-left">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <i class="fa-regular fa-message"></i>
+                                        <i class="fa-regular fa-paper-plane"></i>
+                                    </div>
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                                <div class="post-description">
+                                    <p class="post-liked">Liked by _DQ_.. and others</p>
+                                    <p class="title"><span>
+                                        nivin... </span>Ramachandra Boss & Co
+                                        <p class="comments"> view all comments</p>
+                                    </div>
+                                </div>
+                                <div class="post-main">
+                                    <div class="post-header">
+                                        <div class="post-left-header">
+                                            <div class="post-image">
+                                            <img decoding="async" src="https://img.studioflicks.com/wp-content/uploads/2021/11/09114839/Tovino-Thomas.jpg" alt="">
+                                    </div>
+                                        <p class="post-username">Tovino_ </p>
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span class="one-day"> . 5h </span>
+                                        </div>
+                                        <i class="fa-solid fa-grip-lines"></i>
+                                    </div>
+                                        <div class="post-main-image">
+                                            <img decoding="async" src="https://i.pinimg.com/474x/c8/bf/3d/c8bf3d39cdb5f1b16ef215076a504152.jpg">
+                                        </div>
+                                        <div class="post-fotter">
+                                            <div class="post-fotter-left">
+                                                <i class="fa-regular fa-heart"></i>
+                                                <i class="fa-regular fa-message"></i>
+                                                <i class="fa-regular fa-paper-plane"></i>
+                                            </div>
+                                            <i class="fa-regular fa-bookmark"></i>
+                                        </div>
+                                        <div class="post-description">
+                                            <p class="post-liked">Liked by _DQ_.. and others</p>
+                                            <p class="title"><span>
+                                                Tovino_ </span> ARM 3D  #malayalam #tovinothomas<br> more</p>
+                                                <p class="comments"> view all comments</p>
+                                            </div>
+                                        </div>
+                                        <div class="post-main">
+                                            <div class="post-header">
+                                                <div class="post-left-header">
+                                                    <div class="post-image">
+                                                        <img decoding="async" src="https://i.pinimg.com/474x/96/77/4a/96774a96e41efcfadfddaf0d34e92033.jpg">
+                                                    </div>
+                                                    <p class="post-username">
+                                                        skoda...</p>
+                                                        <i class="fa-solid fa-certificate"></i>
+                                                        <span class="one-day"> . 5d </span>
+                                                    </div>
+                                                    <i class="fa-solid fa-grip-lines"></i>
+                                                </div>
+                        <div class="post-main-image">
+                             <img decoding="async" src="https://i.pinimg.com/736x/53/f2/39/53f239b28ee6e09d793f384d2d798bca.jpg">
+                                    </div>
+                                        <div class="post-fotter">
+                                                    <div class="post-fotter-left">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                        <i class="fa-regular fa-message"></i>
+                                                        <i class="fa-regular fa-paper-plane"></i>
+                                                    </div>
+                                                    <i class="fa-regular fa-bookmark"></i>
+                                                </div>
+                                                <div class="post-description">
+                                                    <p class="post-liked">Liked by Tata.. and others</p>
+                                                    <p class="title"><span>
+                                                        skoda... </span>Škoda Octavia #skoda..
+                                                        <p class="comments"> view all comments</p>
+                                                    </div>
+                                                </div>
+                                                <div class="post-main">
+                                                    <div class="post-header">
+                                                        <div class="post-left-header">
+                                                            <div class="post-image">
+                                                                <img decoding="async" src="https://imageio.forbes.com/specials-images/imageserve/663e595b4509f97fdafb95f5/0x0.jpg?format=jpg&crop=383,383,x1045,y23,safe&height=416&width=416&fit=bounds" alt="">
+                                                            </div>
+                                                            <p class="post-username">
+                                                                Messi..</p>
+                                                                <i class="fa-solid fa-certificate"></i>
+                                                                <span class="one-day"> . 1w </span>
+                                                            </div>
+                                                            <i class="fa-solid fa-grip-lines"></i>
+                                                        </div>
+                                                        <div class="post-main-image">
+                                                            <img decoding="async" src="https://i.pinimg.com/736x/8e/f5/ce/8ef5ce925b67a6a9e0e29b276209d56b.jpg">
+                                                        </div>
+                                                        <div class="post-fotter">
+                                                            <div class="post-fotter-left">
+                                                                <i class="fa-regular fa-heart"></i>
+                                                                <i class="fa-regular fa-message"></i>
+                                                                <i class="fa-regular fa-paper-plane"></i>
+                                                            </div>
+                                                            <i class="fa-regular fa-bookmark"></i>
+                                                        </div>
+                                                        <div class="post-description">
+                                                            <p class="post-liked">Liked by Ronaldo_ and others</p>
+                                                            <p class="title"><span>
+                                                                Messi.. </span>You have to fight to reach your dream. You have to sacrifice and work hard for it.<p class="comments"> view all comments</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post-main">
+                                                            <div class="post-header">
+                                                                <div class="post-left-header">
+                                                                    <div class="post-image">
+                                                                        <img decoding="async" src="https://i.pinimg.com/736x/52/5c/92/525c923fac2b072b58f5b0b81cf8eb0d.jpg">
+                                                                    </div>
+                                                                    <p class="post-username">
+                                                                        thala_vijay</p>
+                                                                        <i class="fa-solid fa-certificate"></i>
+                                                                        <span class="one-day"> . 1d </span>
+                                                                    </div>
+                                                                    <i class="fa-solid fa-grip-lines"></i>
+                                                                </div>
+                                                                <div class="post-main-image">
+                                                                    <img decoding="async" src="https://i.pinimg.com/736x/c3/c2/9a/c3c29a59f6e94e0183c1147e09be9eef.jpg">
+                                                                </div>
+                                                                <div class="post-fotter">
+                                                                    <div class="post-fotter-left">
+                                                                        <i class="fa-regular fa-heart"></i>
+                                                                        <i class="fa-regular fa-message"></i>
+                                                                        <i class="fa-regular fa-paper-plane"></i>
+                                                                    </div>
+                                                                    <i class="fa-regular fa-bookmark"></i>
+                                                                </div>
+                                                                <div class="post-description">
+                                                                    <p class="post-liked">Liked by surya_ and others</p>
+                                                                    <p class="title"><span>
+                                                                        Thalapathy </span>GOAT Vijay PFP || Thalapathy Vijay || Thalapathy 68|| Venkat Prabhu || Greatest of all Time || Vijay
+                                                                        <p class="comments"> view all comments</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                      </div>
+                                                    <div class="follow-section">
+                                                        <div class="profile-follow profile-foolow-hovering">
+                                                                <div class="profile-follow-left">
+                                                                        <div class="profile-follow-image">
+                                                                            <img decoding="async" src="https://i.postimg.cc/zB3mRnhs/apy-logo.png" alt="">
+                                                                            </div>
+                                                                        <div class="profile-follow-content">
+                                                              <p class="profile-id">Marco_.1</p>
+                                                                    <p class="profile-name">Marco</p>
+                                                                  </div>
+                                                                     </div>
+                                                         <a href="#" class="follow">switch</a>
+                                                             </div>
+                                                                 <div class="suggestion-follow">
+                                                                <p class="suggestion">Suggested for you</p>
+                                                            <a href="#" class="see-all">see all</a>
+                                                                    </div>
+                                                                 <div class="profile-follow profile-foolow-hovering">
+                                                            <div class="profile-follow-left">
+                                                                 <div class="profile-follow-image">
+                                                                 <img decoding="async" src="https://i.pinimg.com/736x/26/25/a3/2625a38233bde1c17dd7f91b04fd177a.jpg">
+                                                 </div>
+                                            <div class="profile-follow-content">
+                                                     <p class="profile-id">Surya..</p>
+                                                        <p class="profile-name">Followed by Vijay</p>
+                                     </div>
+                                </div>
+                                    <a href="#" class="follow">follow</a>
+                            </div>
+                <div class="profile-follow profile-foolow-hovering">
+                     <div class="profile-follow-left">
+                                <div class="profile-follow-image">
+                                    <img decoding="async" src="https://i.pinimg.com/736x/63/00/34/63003477612fa021a7fa593dcee06a65.jpg" alt="">
+                      </div>
+                                <div class="profile-follow-content">
+                                  <p class="profile-id">Ajith..1</p>
+                      <p class="profile-name">Followed by Messi + 2 more</p>
+                                 </div>
+                                    </div>
+                                         <a href="#" class="follow">follow</a>
+                    </div>
+                             <div class="profile-follow profile-foolow-hovering">
+                                    <div class="profile-follow-left">
+                                   <div class="profile-follow-image">
+                        <img decoding="async" src="https://i.pinimg.com/736x/50/dc/b5/50dcb54efaaa44f897d6752ec91d6dd0.jpg" alt="">
+                                 </div>
+                             <div class="profile-follow-content">
+                                 <p class="profile-id">Allu_..</p>
+                                        <p class="profile-name">Followed by skoda +....
+
+                                  </p>
+                             </div>
+                        </div>
+                <a href="#" class="follow">follow</a>
+           </div>
+      <div class="profile-follow profile-foolow-hovering">
+       <div class="profile-follow-left">
+             <div class="profile-follow-image">
+        <img decoding="async" src="https://i.pinimg.com/736x/f0/b5/e5/f0b5e55a451c9ba2a566a93dac898ea5.jpg" alt="">
+         </div>
+  <div class="profile-follow-content">
+      <p class="profile-id">Jose</p>
+  <p class="profile-name">Followed by Vijay </p>
+        </div>
+                </div>
+             <a href="#" class="follow">follow</a>
+                 </div>
+            <div class="profile-follow profile-foolow-hovering">
+         <div class="profile-follow-left">
+        <div class="profile-follow-image">
+        <img decoding="async" src="https://i.pinimg.com/736x/c3/67/22/c367225f64b50ebcef25de71d57c02d0.jpg" alt="">
+    </div>
+ <div class="profile-follow-content">
+        <p class="profile-id">Antony..</p>
+             <p class="profile-name">New to Instagram</p>
+                 </div>
+                 </div>
+          <a href="#" class="follow">follow</a>
+                 </div>
+             </div>
+         </div>
+      </div>
+        <script src="script.js" defer data-deferred="1"></script> 
+     </body>
+</html>
